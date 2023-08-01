@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.firstproject.user.UserMapper">
+    <insert id="insUser" useGeneratedKeys="true" keyProperty="iuser">
+        insert into user
+        (name,email)
+        values
+        (#{name},#{email})
+    </insert>
+
+<update id="upUserPic">
+    update user
+    set main_pic = #{mainPic}
+    where iuser = #{iuser}
+
+</update>
+
+
+
+    <update id="upAllUser">
+        update user
+        set name = #{name}
+        , objective = #{objective}
+        , email = #{email}
+        where iuser = #{iuser}
+    </update>
+
+
+<select id="selAllUser">
+    select iuser,name, main_pic mainPic, objective, email
+    from user
+</select>
+
+    <select id="selEmail">
+        SELECT A.email
+        FROM user A
+        LEFT JOIN todo B
+        ON A.iuser = B.iuser
+        AND B.created_at = CURDATE()
+        WHERE B.iuser IS NULL;
+    </select>
+
+</mapper>

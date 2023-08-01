@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.firstproject.memo.MemoMapper">
+    <insert id="insMemo" useGeneratedKeys="true" keyProperty="imemo">
+       insert into memo
+        (title,ctnt, iuser)
+        values
+        (#{title},#{ctnt},#{iuser})
+    </insert>
+    <update id="upAllMemo">
+        update memo
+        set title = #{title},
+        ctnt = #{ctnt},
+        updated_at = current_timestamp
+        where imemo = #{imemo}
+        and iuser = #{iuser}
+    </update>
+
+
+
+
+    <select id="selMemo" resultType="MemoListVo">
+        select title, ctnt
+        from memo
+        where imemo = #{imemo}
+        and iuser = #{iuser}
+    </select>
+
+    <select id="selAllMemo">
+        select imemo,iuser,title,ctnt,created_at,updated_at
+        from memo
+    </select>
+
+    <delete id="delMemo">
+        delete from memo
+        where imemo = #{imemo}
+    </delete>
+
+    <delete id="delAllMemo">
+        delete from memo
+    </delete>
+
+</mapper>

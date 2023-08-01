@@ -1,0 +1,39 @@
+# db config
+spring:
+  servlet:
+    multipart:
+      max-file-size: 3MB
+      max-request-size: 12MB
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://192.168.0.144:3306/team_h
+    username: root
+    password: green502
+    jdbc-url: jdbc:mariadb://192.168.0.144:3306/team_h
+  mail:
+    host : smtp.gmail.com
+    port : 587
+    username : teamgreenh502
+    password : szmhabnwvpwxcxyg
+    properties :
+      mail :
+        smtp :
+          auth : true
+          starttls :
+            enable : true
+            required : true
+
+# mybatis config
+mybatis:
+  type-aliases-package: com.green.firstproject
+  mapper-locations: mapper/**/*.xml
+
+# swagger
+springdoc:
+  swagger-ui:
+    path: /swagger.html
+
+file:
+  dir: /home/download
+
+#email
