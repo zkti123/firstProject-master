@@ -9,6 +9,6 @@
 
 * STUDYHUB : <https://web-study-hub-rt92alkkyddso.sel4.cloudtype.app/>
 
-*![image](https://github.com/zkti123/studyhub/assets/130739179/404bc8ca-1541-4f1e-9621-8e4741e77055)
+![image](https://github.com/zkti123/studyhub/assets/130739179/404bc8ca-1541-4f1e-9621-8e4741e77055)
 
 
