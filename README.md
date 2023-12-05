@@ -8,3 +8,6 @@
 * PPT : <https://www.canva.com/design/DAFn78z5SnE/cKER1BXqLKIRfisC8DWavA/edit>
 
 * STUDYHUB : <https://web-study-hub-rt92alkkyddso.sel4.cloudtype.app/>
+
+* ![image](https://github.com/zkti123/studyhub/assets/130739179/13e791f2-a1be-44a5-846c-7d89c1e4c4c3)
+
